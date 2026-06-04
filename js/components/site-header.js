@@ -1,0 +1,61 @@
+/* =========================================================
+   <site-header> — sticky navigation bar
+   ---------------------------------------------------------
+   Renders the brand, primary navigation and the contact CTA
+   from the shared content data, and manages the mobile menu
+   toggle (open / close, ARIA state, close-on-link-click).
+   ========================================================= */
+
+import { Component, define } from "../lib/component.js";
+import { brand, navLinks } from "../site-content.js";
+
+class SiteHeader extends Component {
+  render() {
+    const links = navLinks
+      .map((link) => `<a href="${link.href}">${link.label}</a>`)
+      .join("");
+
+    return `
+      <header class="nav" id="top">
+        <div class="nav__inner">
+          <a href="#top" class="brand" aria-label="${brand.name} home">
+            <img class="brand__logo" src="${brand.logo}" alt="${brand.name}"
+                 width="472" height="125" />
+          </a>
+
+          <nav class="nav__links" aria-label="Primary">
+            ${links}
+            <a href="#contact" class="nav__contact-mobile">Contact us</a>
+          </nav>
+
+          <a href="#contact" class="btn btn--nav">Contact us</a>
+
+          <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </header>
+    `;
+  }
+
+  afterRender() {
+    const toggle = this.querySelector(".nav__toggle");
+    const links = this.querySelector(".nav__links");
+    if (!toggle || !links) return;
+
+    toggle.addEventListener("click", () => {
+      const open = links.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+
+    // Close the mobile menu whenever a link inside it is followed.
+    links.querySelectorAll("a").forEach((anchor) => {
+      anchor.addEventListener("click", () => {
+        links.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+}
+
+define("site-header", SiteHeader);
