@@ -39,3 +39,17 @@ export function define(tagName, ComponentClass) {
     customElements.define(tagName, ComponentClass);
   }
 }
+
+/**
+ * Resolve a navigation href against the current page. An in-page
+ * anchor (e.g. "#about") only works on the page that actually
+ * contains that section. On other pages (like news.html) we send
+ * the user to the matching section on the home page instead.
+ * Hrefs to other documents are returned unchanged.
+ */
+export function resolveHref(href) {
+  if (href.startsWith("#") && !document.getElementById(href.slice(1))) {
+    return `index.html${href}`;
+  }
+  return href;
+}

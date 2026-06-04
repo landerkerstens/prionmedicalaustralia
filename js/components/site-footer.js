@@ -6,7 +6,7 @@
    year automatically.
    ========================================================= */
 
-import { Component, define } from "../lib/component.js";
+import { Component, define, resolveHref } from "../lib/component.js";
 import { brand, footerColumns } from "../site-content.js";
 
 class SiteFooter extends Component {
@@ -16,7 +16,7 @@ class SiteFooter extends Component {
     const columns = footerColumns
       .map((column) => {
         const links = column.links
-          .map((link) => `<a href="${link.href}">${link.label}</a>`)
+          .map((link) => `<a href="${resolveHref(link.href)}">${link.label}</a>`)
           .join("");
         return `<div><h4>${column.heading}</h4>${links}</div>`;
       })

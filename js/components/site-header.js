@@ -6,14 +6,16 @@
    toggle (open / close, ARIA state, close-on-link-click).
    ========================================================= */
 
-import { Component, define } from "../lib/component.js";
+import { Component, define, resolveHref } from "../lib/component.js";
 import { brand, navLinks } from "../site-content.js";
 
 class SiteHeader extends Component {
   render() {
     const links = navLinks
-      .map((link) => `<a href="${link.href}">${link.label}</a>`)
+      .map((link) => `<a href="${resolveHref(link.href)}">${link.label}</a>`)
       .join("");
+
+    const contactHref = resolveHref("#contact");
 
     return `
       <header class="nav" id="top">
@@ -25,10 +27,10 @@ class SiteHeader extends Component {
 
           <nav class="nav__links" aria-label="Primary">
             ${links}
-            <a href="#contact" class="nav__contact-mobile">Contact us</a>
+            <a href="${contactHref}" class="nav__contact-mobile">Contact us</a>
           </nav>
 
-          <a href="#contact" class="btn btn--nav">Contact us</a>
+          <a href="${contactHref}" class="btn btn--nav">Contact us</a>
 
           <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
             <span></span><span></span><span></span>

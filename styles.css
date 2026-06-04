@@ -76,7 +76,7 @@ img, svg { display: block; max-width: 100%; }
    ---------------------------------------------------------- */
 site-header, site-footer, site-marquee,
 portfolio-grid, clinical-list, partner-list,
-contact-form, product-card { display: contents; }
+contact-form, product-card, news-list { display: contents; }
 
 /* ----------------------------------------------------------
    4. Layout helpers
@@ -254,6 +254,16 @@ contact-form, product-card { display: contents; }
   margin-top: 1.6rem; padding: 1rem 1.4rem; border: 1.5px dashed var(--grey);
   border-radius: var(--radius); color: var(--grey); font-size: .9rem; font-weight: 500;
 }
+
+/* ---------- news ---------- */
+.news__list { display: grid; gap: 0; border-top: 1px solid var(--line); max-width: 860px; margin: 0 auto; }
+.news-item { padding: 2.2rem 0; border-bottom: 1px solid var(--line); transition: padding-left .3s ease; }
+.news-item:hover { padding-left: 1rem; }
+.news-item__meta { display: flex; align-items: center; gap: 1rem; margin-bottom: .7rem; }
+.news-item__meta time { font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--grey); font-weight: 600; }
+.news-item__tag { font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--muted); padding: .25rem .65rem; border: 1px solid var(--line); border-radius: 100px; }
+.news-item h3 { font-size: clamp(1.3rem, 2.5vw, 1.7rem); }
+.news-item p { margin-top: .6rem; color: var(--ink-soft); font-size: 1.02rem; }
 
 /* ----------------------------------------------------------
    6. Forms (contact)

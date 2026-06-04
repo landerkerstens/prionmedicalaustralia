@@ -9,6 +9,7 @@ so it deploys to any static host as-is.
 ```
 .
 ├── index.html        Page shell + unique prose (hero, about, compliance, contact copy)
+├── news.html         News page shell (header + news list + footer)
 ├── styles.css        Design tokens + all styling
 ├── logo.svg          Brand mark (now displayed 25% larger)
 └── js/
@@ -24,6 +25,7 @@ so it deploys to any static host as-is.
     │   ├── clinical-list.js  <clinical-list> clinical-area rows
     │   ├── partner-list.js   <partner-list>  "why partner" bullet list
     │   ├── contact-form.js   <contact-form>  enquiry form + validation
+    │   ├── news-list.js      <news-list>     dated news entries
     │   └── site-footer.js    <site-footer>   footer + auto year
     └── behaviours/
         └── scroll-reveal.js  fade-and-rise reveal on scroll

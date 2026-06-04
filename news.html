@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News — Prion Medical Australia</title>
+  <meta name="description" content="Latest news and announcements from Prion Medical Australia: portfolio updates, training programmes and company milestones in therapeutic endoscopy and ablation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== NAV (component) ===== -->
+  <site-header></site-header>
+
+  <main id="main" tabindex="-1">
+
+  <!-- ===== NEWS ===== -->
+  <section class="section news" id="news">
+    <div class="section__head">
+      <p class="eyebrow">News</p>
+      <h2>Updates from Prion Medical Australia.</h2>
+      <p class="section__sub">Portfolio additions, training programmes and company milestones. Product availability and indications are subject to Australian regulatory registration.</p>
+    </div>
+    <!-- dated entries rendered by the component -->
+    <news-list></news-list>
+  </section>
+
+  </main>
+
+  <!-- ===== FOOTER (component) ===== -->
+  <site-footer></site-footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

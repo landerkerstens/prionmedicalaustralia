@@ -19,6 +19,7 @@ export const navLinks = [
   { label: "Clinical areas", href: "#clinical" },
   { label: "Why partner", href: "#partner" },
   { label: "Regulatory", href: "#compliance" },
+  { label: "News", href: "news.html" },
 ];
 
 /* Words shown in the scrolling marquee under the hero. */
@@ -96,6 +97,28 @@ export const partnerPoints = [
   },
 ];
 
+/* News / announcements, newest first. Shown on news.html. */
+export const newsItems = [
+  {
+    date: "2026-05-20",
+    label: "Company",
+    title: "Prion Medical Australia is now operating.",
+    body: "Our Australian operation is live, extending the focused European model of clinician-led support to hospitals and specialists across the country. We are introducing our therapeutic endoscopy and ablation portfolio to gastroenterology, surgical and interventional teams.",
+  },
+  {
+    date: "2026-04-08",
+    label: "Portfolio",
+    title: "STARmed RFA needles join our Australian range.",
+    body: "We are adding radiofrequency ablation electrodes to the portfolio we represent locally, supporting interventional indications including the ablation of benign thyroid nodules. Availability and indications remain subject to Australian regulatory registration.",
+  },
+  {
+    date: "2026-03-02",
+    label: "Education",
+    title: "Hands-on training programme in development.",
+    body: "We are building a structured onboarding and case-support programme for clinical and nursing teams using over-the-scope closure and full-thickness resection devices. Express your interest through the contact form and a specialist will be in touch.",
+  },
+];
+
 /* Footer link columns. */
 export const footerColumns = [
   {
@@ -111,6 +134,7 @@ export const footerColumns = [
     links: [
       { label: "Why partner", href: "#partner" },
       { label: "Regulatory", href: "#compliance" },
+      { label: "News", href: "news.html" },
       { label: "Contact", href: "#contact" },
     ],
   },
