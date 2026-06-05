@@ -264,6 +264,8 @@ contact-form, product-card, news-list { display: contents; }
 .news-item__tag { font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--muted); padding: .25rem .65rem; border: 1px solid var(--line); border-radius: 100px; }
 .news-item h3 { font-size: clamp(1.3rem, 2.5vw, 1.7rem); }
 .news-item p { margin-top: .6rem; color: var(--ink-soft); font-size: 1.02rem; }
+.news__embed { display: flex; justify-content: center; }
+.news__embed-frame { width: 100%; max-width: 504px; height: 712px; border: 1px solid var(--line); border-radius: 8px; }
 
 /* ----------------------------------------------------------
    6. Forms (contact)

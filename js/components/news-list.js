@@ -1,38 +1,27 @@
 /* =========================================================
-   <news-list> — news / announcement entries
+   <news-list> — latest LinkedIn post
    ---------------------------------------------------------
-   Renders the news items from the shared content data, newest
-   first, as a list of dated entries. Used on news.html.
+   Embeds the latest post from the Prion Medical Australia
+   LinkedIn page via LinkedIn's official embed iframe. The
+   post shown is controlled by `linkedinEmbedUrl` in
+   site-content.js. Used on news.html.
    ========================================================= */
 
 import { Component, define } from "../lib/component.js";
-import { newsItems } from "../site-content.js";
-
-const dateFormat = new Intl.DateTimeFormat("en-AU", {
-  day: "numeric",
-  month: "long",
-  year: "numeric",
-});
+import { linkedinEmbedUrl } from "../site-content.js";
 
 class NewsList extends Component {
   render() {
-    const items = newsItems
-      .map(
-        (item) => `
-        <article class="news-item reveal">
-          <div class="news-item__meta">
-            <time datetime="${item.date}">${dateFormat.format(
-          new Date(item.date)
-        )}</time>
-            <span class="news-item__tag">${item.label}</span>
-          </div>
-          <h3>${item.title}</h3>
-          <p>${item.body}</p>
-        </article>`
-      )
-      .join("");
-
-    return `<div class="news__list">${items}</div>`;
+    return `
+      <div class="news__embed reveal">
+        <iframe
+          class="news__embed-frame"
+          src="${linkedinEmbedUrl}"
+          title="Latest LinkedIn post from Prion Medical Australia"
+          frameborder="0"
+          allowfullscreen
+          loading="lazy"></iframe>
+      </div>`;
   }
 }
 

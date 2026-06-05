@@ -97,6 +97,13 @@ export const partnerPoints = [
   },
 ];
 
+/* LinkedIn embed shown on news.html.
+   To show a different post: open the post on LinkedIn, click the "..."
+   menu, choose "Embed this post", and copy the src URL from the iframe
+   (it looks like the example below). Paste only that URL here. */
+export const linkedinEmbedUrl =
+  "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7441842275833233408";
+
 /* News / announcements, newest first. Shown on news.html. */
 export const newsItems = [
   {
