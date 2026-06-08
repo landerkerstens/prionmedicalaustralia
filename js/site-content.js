@@ -24,37 +24,37 @@ export const navLinks = [
 
 /* Words shown in the scrolling marquee under the hero. */
 export const marqueeWords = [
-  "Gastroenterology",
-  "Therapeutic endoscopy",
-  "Interventional ablation",
-  "Endoscopic surgery",
+  "Radiofrequency ablation",
+  "AI-assisted endoscopy",
+  "Thyroid & fibroid",
+  "Minimally invasive",
 ];
 
 /* Product / device families shown in the Portfolio section. */
 export const products = [
   {
     index: "01",
-    name: "OTSC\u00aeneo System",
-    category: "Over-the-scope clip",
+    name: "RFA Needles",
+    category: "Radiofrequency ablation",
     description:
-      "An over-the-scope clip system for endoscopic closure and tissue approximation, designed for situations where reliable, full-thickness grip matters.",
-    tags: ["Closure", "Haemostasis", "Fixation"],
+      "Radiofrequency ablation electrodes for image-guided, non-surgical treatment of benign thyroid nodules and uterine fibroids \u2014 a minimally invasive alternative to surgery in suitable patients.",
+    tags: ["RFA", "Thyroid", "Fibroid"],
   },
   {
     index: "02",
-    name: "FTRD\u00ae System",
-    category: "Full-thickness resection",
+    name: "AI Endoscopy & Reporting",
+    category: "AI-assisted endoscopy",
     description:
-      "A device platform for endoscopic full-thickness resection of selected lesions in the lower and upper GI tract, performed in a single, controlled step.",
-    tags: ["Resection", "EFTR", "Colorectal"],
+      "An AI-assisted endoscopy platform pairing real-time detection support with structured, automated reporting to streamline the procedure and the record that follows it.",
+    tags: ["AI detection", "Reporting", "Workflow"],
   },
   {
     index: "03",
-    name: "STARmed RFA Needles",
-    category: "Radiofrequency ablation",
+    name: "Coming soon",
+    category: "In development",
     description:
-      "Radiofrequency ablation electrodes used in interventional procedures, including the ablation of benign thyroid nodules and other targeted indications.",
-    tags: ["RFA", "Thyroid", "Interventional"],
+      "A next-generation device developed in-house is on the way. We will share more as it approaches clinical introduction \u2014 register your interest to be among the first to hear.",
+    tags: ["In development", "Innovation"],
   },
 ];
 
@@ -62,18 +62,18 @@ export const products = [
 export const clinicalAreas = [
   {
     marker: "A",
-    title: "Therapeutic gastroenterology",
-    body: "Closure of perforations and fistulae, control of GI bleeding, and resection of lesions that are difficult to treat with conventional snare techniques.",
+    title: "Interventional ablation",
+    body: "Image-guided radiofrequency ablation for benign thyroid nodules and uterine fibroids, offering a non-surgical, minimally invasive alternative for suitable patients.",
   },
   {
     marker: "B",
-    title: "Endoscopic resection",
-    body: "Full-thickness resection workflows that allow selected lesions to be removed and the defect closed within a single endoscopic procedure.",
+    title: "AI-assisted endoscopy",
+    body: "Real-time detection support paired with structured, automated reporting, helping clinicians work more consistently and capture the record as the procedure unfolds.",
   },
   {
     marker: "C",
-    title: "Interventional ablation",
-    body: "Image-guided radiofrequency ablation for indications including benign thyroid nodules, offering a minimally invasive alternative to surgery in suitable patients.",
+    title: "Therapeutic endoscopy",
+    body: "A focused range of devices for the GI tract, supported by hands-on clinical guidance \u2014 with a next-generation, in-house developed technology in the pipeline.",
   },
 ];
 
@@ -115,14 +115,14 @@ export const newsItems = [
   {
     date: "2026-04-08",
     label: "Portfolio",
-    title: "STARmed RFA needles join our Australian range.",
-    body: "We are adding radiofrequency ablation electrodes to the portfolio we represent locally, supporting interventional indications including the ablation of benign thyroid nodules. Availability and indications remain subject to Australian regulatory registration.",
+    title: "RFA needles join our Australian range.",
+    body: "We are adding radiofrequency ablation electrodes to the portfolio we represent locally, supporting non-surgical treatment of benign thyroid nodules and uterine fibroids. Availability and indications remain subject to Australian regulatory registration.",
   },
   {
     date: "2026-03-02",
     label: "Education",
     title: "Hands-on training programme in development.",
-    body: "We are building a structured onboarding and case-support programme for clinical and nursing teams using over-the-scope closure and full-thickness resection devices. Express your interest through the contact form and a specialist will be in touch.",
+    body: "We are building a structured onboarding and case-support programme for the clinical and nursing teams who will use our portfolio. Express your interest through the contact form and a specialist will be in touch.",
   },
 ];
 
