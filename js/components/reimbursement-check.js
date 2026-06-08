@@ -10,6 +10,8 @@
 
 import { Component, define } from "../lib/component.js";
 
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 class ReimbursementCheck extends Component {
   render() {
     return `
@@ -49,6 +51,10 @@ class ReimbursementCheck extends Component {
                 <label for="rc-studies">Number of studies</label>
                 <input type="number" id="rc-studies" name="studies" min="0" required />
               </div>
+            </div>
+            <div class="field">
+              <label for="rc-email">Email address</label>
+              <input type="email" id="rc-email" name="email" autocomplete="email" required />
             </div>
             <button type="submit" class="btn btn--solid btn--full">Submit</button>
             <p class="form__status" role="status" aria-live="polite"></p>
@@ -94,9 +100,16 @@ class ReimbursementCheck extends Component {
       const certified = form.elements.certified.value;
       const patients = form.elements.patients.value.trim();
       const studies = form.elements.studies.value.trim();
+      const email = form.elements.email.value.trim();
 
-      if (!company || !product || !certified || !patients || !studies) {
+      if (!company || !product || !certified || !patients || !studies || !email) {
         status.textContent = "Please complete every field before submitting.";
+        status.className = "form__status err";
+        return;
+      }
+
+      if (!EMAIL_PATTERN.test(email)) {
+        status.textContent = "Please enter a valid email address.";
         status.className = "form__status err";
         return;
       }
